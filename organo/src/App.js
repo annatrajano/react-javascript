@@ -1,10 +1,11 @@
 // # Main Import
-import Banner from './components/banner/banner';
+import { Banner, FormInput } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Banner />
+      <FormInput />
     </div>
   );
 }
