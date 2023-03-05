@@ -1,0 +1,17 @@
+.bttn {
+    background-color: 
+    #6278F7;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 4%;
+    border: none;
+    cursor: pointer;
+    color: #FFFF;
+    margin: 6% 0;
+
+}
+
+.bttn:hover {
+    color: #95FFD4;
+}

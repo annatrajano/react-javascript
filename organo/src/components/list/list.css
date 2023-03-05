@@ -1,15 +1,10 @@
-.form-input {
-  margin: 5% 0 ;
-}
-
-.form-input label {
+.list label {
   display: block;
   margin-bottom: 2%;
   font-size: 24px;
-  color: #212121;
 }
 
-.form-input input {
+.list select {
   background-color: #ffff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   width: 100%;
