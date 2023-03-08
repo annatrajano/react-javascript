@@ -1,6 +1,7 @@
 // # Main Import
 import { useState } from "react";
 import { Banner, Form } from "./components";
+import Teams from "./components/teams";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Banner />
       <Form  createUser={user => createUser(user)} />
+      <Teams  nome="Programação"/>
     </div>
   );
 }
