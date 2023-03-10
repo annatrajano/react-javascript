@@ -1,5 +1,6 @@
 // # Style
 import "./teams.css";
+import Card from "../card";
 
 const Teams = (props) => {
   const data = props.data;
@@ -10,6 +11,7 @@ const Teams = (props) => {
       style={{ backgroundColor: `${data.secondaryColor}` }}
     >
       <h3 style={{ borderBottomColor: `${data.primaryColor}` }}>{data.name}</h3>
+      <Card />
     </section>
   );
 };
