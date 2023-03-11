@@ -2,14 +2,17 @@
 import "./card.css";
 
 const Card = (props) => {
+
+  const user = props.user;
+
   return (
     <div className="colaborador">
       <div className="cabecalho">
-        <img src={props.image} alt={props.description_image}></img>
+        <img src={user.imageValue} alt={user.imageValue}></img>
       </div>
       <div className="rodape">
-        <h4>{props.name}</h4>
-        <h5>{props.description}</h5>
+        <h4>{user.nameValue}</h4>
+        <h5>{user.teamValue}</h5>
       </div>
     </div>
   );

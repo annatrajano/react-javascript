@@ -53,7 +53,7 @@ function App() {
       <Banner />
       <Form createUser={(user) => createUser(user)} />
       {teams.map((item, index) => (
-        <Teams key={index} data={item} />
+        <Teams key={index} data={item}  users={users.filter((user)=> user.teamValue === item.name)} />
       ))}
     </div>
   );

@@ -61,6 +61,10 @@ const Form = (props) => {
       imageValue,
       teamValue
     })
+    setTeamValue("")
+    setNameValue("")
+    setPositionValue("")
+    setImageValue("")
   }
 
   return (
