@@ -14,8 +14,8 @@ const Teams = (props) => {
     >
       <h3 style={{ borderBottomColor: `${data.primaryColor}` }}>{data.name}</h3>
       <div className="users">
-        {users.map((user) => (
-          <Card user={user} />
+        {users.map((user, index) => (
+          <Card key={index} user={user} data={data}/>
         ))}
       </div>
     </section>
