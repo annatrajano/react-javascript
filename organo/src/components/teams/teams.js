@@ -2,9 +2,8 @@
 import "./teams.css";
 import Card from "../card";
 
-const Teams = (props) => {
-  const data = props.data;
-  const users = props.users;
+const Teams = ({data, users, userDelete}) => {
+
 
   return (
     users.length > 0 &&
@@ -14,9 +13,9 @@ const Teams = (props) => {
     >
       <h3 style={{ borderBottomColor: `${data.primaryColor}` }}>{data.name}</h3>
       <div className="users">
-        {users.map((user, index) => (
-          <Card key={index} user={user} data={data}/>
-        ))}
+        {users.map((user, index) => {
+          return <Card key={index} user={user} data={data} userDelete={userDelete}/>
+})}
       </div>
     </section>
   );

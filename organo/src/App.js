@@ -48,12 +48,17 @@ function App() {
     setUsers([...users, user]);
   };
 
+  function userDelete() {
+    console.log("deletando colaborador")
+
+  }
+
   return (
     <div className="App">
       <Banner />
       <Form createUser={(user) => createUser(user)} />
       {teams.map((item, index) => (
-        <Teams key={index} data={item}  users={users.filter((user)=> user.teamValue === item.name)} />
+        <Teams key={index} data={item}   userDelete={userDelete} users={users.filter((user)=> user.teamValue === item.name)} />
       ))}
     </div>
   );
