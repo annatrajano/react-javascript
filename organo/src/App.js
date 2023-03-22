@@ -4,43 +4,36 @@ import { Banner, Form } from "./components";
 import Teams from "./components/teams";
 
 function App() {
-  const teams = [
+  const [teams, setTeams] = useState([
     {
       name: "Programação",
-      primaryColor: "#57C278",
-      secondaryColor: "#D9F7E9",
+      color: "#57C278",
     },
     {
       name: "FrontEnd",
-      primaryColor: "#82CFFA",
-      secondaryColor: "#E8F8FF",
+      color:  "#82CFFA",
     },
     {
       name: "Data Science",
-      primaryColor: "#A6D157",
-      secondaryColor: "#F0F8E2",
+      color: "#A6D157",
     },
     {
       name: "Devops",
-      primaryColor: "#E06B69",
-      secondaryColor: "#FDE7E8",
+      color: "#E06B69",
     },
     {
       name: "UX e Desing",
-      primaryColor: "#DB6EBF",
-      secondaryColor: "#FAE9F5",
+      color: "#DB6EBF",
     },
     {
       name: "Mobile",
-      primaryColor: "#FFF5D9",
-      secondaryColor: "#FFBA05",
+      color: "#FFF5D9",
     },
     {
       name: "Inovação e Gestão",
-      primaryColor: "#FFEEDF",
-      secondaryColor: "#FF8A29",
+      color: "#FFEEDF",
     },
-  ];
+  ]);
 
   const [users, setUsers] = useState([]);
 
@@ -49,8 +42,18 @@ function App() {
   };
 
   function userDelete() {
-    console.log("deletando colaborador")
+    console.log("deletando colaborador");
+  }
 
+  function changeColorTeam(cor, nome) {
+    setTeams(
+      teams.map((team) => {
+        if (team.name === nome) {
+          team.color = cor;
+        }
+        return team;
+      })
+    );
   }
 
   return (
@@ -58,7 +61,14 @@ function App() {
       <Banner />
       <Form createUser={(user) => createUser(user)} />
       {teams.map((item, index) => (
-        <Teams key={index} data={item}   userDelete={userDelete} users={users.filter((user)=> user.teamValue === item.name)} />
+        <Teams
+          key={index}
+          data={item}
+          changeColorTeam={changeColorTeam}
+          teams={teams}
+          userDelete={userDelete}
+          users={users.filter((user) => user.teamValue === item.name)}
+        />
       ))}
     </div>
   );
