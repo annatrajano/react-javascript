@@ -7,7 +7,7 @@ const Card = ({ user, data, userDelete }) => {
 
   return (
     <div className="colaborador" >
-      <AiFillCloseCircle size={25} onClick={userDelete} className="deletar"/>
+      <AiFillCloseCircle size={25} onClick={()=> userDelete(user.id)} className="deletar"/>
       <div className="cabecalho" style={{ backgroundColor: `${data.color}` }} >
         <img src={user.imageValue} alt={user.imageValue}></img>
       </div>

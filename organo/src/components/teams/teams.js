@@ -7,13 +7,14 @@ import Card from "../card";
 const Teams = ({data, users, userDelete, changeColorTeam}) => {
 
 
+
   return (
     users.length > 0 &&
     <section
       className="teams"
       style={{  backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: hexToRgba( data.color, "0.6")}}
     >
-      <input type="color" className="input-cor" value={data.color}  onChange={(e)=> changeColorTeam(e.target.value, data.name)} />
+      <input type="color" className="input-cor" value={data.color}  onChange={(e)=> changeColorTeam(e.target.value, data.id)} />
       <h3 style={{ borderBottomColor: `${data.color}` }}>{data.name}</h3>
       <div className="users">
         {users.map((user, index) => {
