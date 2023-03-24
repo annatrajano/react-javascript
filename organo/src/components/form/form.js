@@ -63,7 +63,7 @@ const Form = (props) => {
     {
       label: "Cor",
       placeholder: "Digite a cor do time",
-      type: "text",
+      type: "color",
       required: true,
       value: colorValue,
       setState: setColorValue,
@@ -89,6 +89,7 @@ const Form = (props) => {
     e.preventDefault();
     props.createUser({
       id: uuidv4(),
+      favorite: false,
       nameValue,
       positionValue,
       imageValue,

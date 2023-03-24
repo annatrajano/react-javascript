@@ -1,11 +1,13 @@
 .formulario {
   display: flex;
+  gap: 20px;
   justify-content: center;
-  margin: 5% 0;
+  flex-wrap: wrap;
+  margin: 5%;
 }
 
 .formulario form {
-    max-width: 80%;
+    flex: 1;
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 5% 10%;

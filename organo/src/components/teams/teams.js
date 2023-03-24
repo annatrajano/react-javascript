@@ -4,7 +4,7 @@ import hexToRgba from "hex-to-rgba";
 import "./teams.css";
 import Card from "../card";
 
-const Teams = ({data, users, userDelete, changeColorTeam}) => {
+const Teams = ({data, users, userDelete, changeColorTeam, makeFavoriteUser }) => {
 
 
 
@@ -18,7 +18,7 @@ const Teams = ({data, users, userDelete, changeColorTeam}) => {
       <h3 style={{ borderBottomColor: `${data.color}` }}>{data.name}</h3>
       <div className="users">
         {users.map((user, index) => {
-          return <Card key={index} user={user} data={data} userDelete={userDelete}/>
+          return <Card key={index} user={user} data={data} userDelete={userDelete} makeFavoriteUser={makeFavoriteUser}/>
 })}
       </div>
     </section>

@@ -9,7 +9,7 @@ const FormInput = (props) => {
   }
 
   return (
-    <div className="form-input">
+    <div className={`form-input form-input-${data.type}`}>
       <label>{data.label}</label>
       <input value={data.value} onChange={handleChange} placeholder={data.placeholder} type={data.type} required={data.required} name={data.label} />
     </div>
