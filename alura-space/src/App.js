@@ -1,11 +1,6 @@
-import './styles/globalStyles.scss'
-import Home from "./pages/Home";
-
+import './styles/estilosGlobais.scss'
+import PaginaInicial from "./paginas/PaginaInicial";
 
 export default function App() {
-  return (
-    <Home />
-  );
+  return <PaginaInicial/>;
 }
-
-
