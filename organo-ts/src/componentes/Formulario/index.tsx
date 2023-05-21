@@ -6,7 +6,7 @@ import './Formulario.css'
 import { IColaborador } from '../../compartilhados/interfaces/IColaborador'
 
 interface FormularioProps {
-    obrigatorio: boolean
+    obrigatorio?: boolean
     aoColaboradorCadastrado: (colaborador: IColaborador) => void
     times: string[]
 
