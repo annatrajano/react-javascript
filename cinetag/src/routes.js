@@ -1,21 +1,23 @@
-import Favorite from "pages/Favorite";
-import Home from "pages/Home";
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Favoritos from "pages/Favoritos";
+import Inicio from "pages/Inicio";
+import NaoEncontrada from "pages/NaoEncontrada";
+import PaginaBase from "pages/PaginaBase";
 import Player from "pages/Player";
-import NotFound from "pages/NotFound";
-import BasePage from "pages/BasePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export default function AppRoutes() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<BasePage />} />
-        <Route index element={<Home />} />
-        <Route path="favoritos" element={<Favorite />} />
-        <Route path=":id" element={<Player />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  );
+function AppRoutes() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<PaginaBase />}>
+                    <Route index element={<Inicio />}></Route>
+                    <Route path="favoritos" element={<Favoritos />}></Route>
+                    <Route path=":id" element={<Player />}></Route>
+                    <Route path="*" element={<NaoEncontrada />}></Route>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
+
+export default AppRoutes;
